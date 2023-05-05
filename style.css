@@ -1,0 +1,165 @@
+
+/*global*/
+@font-face {
+    font-family: Norse-Bold;
+    src: url(./fonts/Norse-Bold.otf);
+}
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    margin: 0;
+    background-color: hsl(210deg 20% 98.04%);
+    width:100vw;
+    height: fit-content;
+}
+
+
+/*left side*/
+.sidebar{
+    background-image: url(./images/halie-west-25xggax4bSA-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    width: 40vw;
+    position: relative;
+    min-height: 100vh;
+}
+
+
+.overlay{
+    display:flex;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+    height: 165px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin-top: 20%;
+}
+
+.overlay > p{
+    color: white;
+    font-family: Norse-Bold;
+    font-size: 100px;
+    margin: 0;
+    margin-top: 4vh;
+    overflow: auto;
+}
+
+.logo{
+    height: 80%;
+}
+
+footer{
+    align-self: center;
+    position: absolute;
+    bottom: 1vh;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/*right side*/
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex:1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    width: min(800px, 60vw);
+    padding: 30px;
+}
+
+.intro{
+    width: 100%;
+    padding-top: 80px;
+}
+
+div.form{
+    padding: 30px;
+    margin-left: -30px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+h2{
+    margin: 0px;
+}
+
+form{
+    padding-top: 30px;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 60px;
+    row-gap: 30px;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    width: max(40%, 300px);
+}
+
+input{
+    appearance: none;
+    height: 1.5rem;
+    width: 100%;
+    border: solid rgb(174, 172, 172) 1px;
+    border-radius: 3px;
+}
+
+label{
+    font-size: 14px;
+}
+
+button[type='submit']{
+    width: 200px;
+    height: 3rem;
+    background-color: hsl(92.43deg 20.44% 35.49%);
+    border-radius: 7px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border: 0px ;
+}
+
+a.log-in{
+    text-decoration: none;
+    color: hsl(92.43deg 20.44% 35.49%);
+}
+
+input:focus{
+    border: 1px solid blue;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+input:invalid{
+    border: 1px solid red;
+}
+
+input[type='email']:invalid:required + span::after{
+    font-size: 12px;
+    vertical-align: top;
+    content: "* Please enter a valid email";
+    color: red;
+    font-weight: lighter;
+}
